@@ -1,0 +1,241 @@
+body{
+    overflow-x:hidden ;
+}
+
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    height: 50px;
+    background: #f4eeee;
+    border-bottom: 2px solid #555;
+    padding: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+/* Logo */
+.logo{
+    color: rgb(200, 119, 200);
+    cursor: pointer;
+}
+
+span{
+    color: green;
+    font-size: larger;
+    font-weight:900;
+}
+
+
+/* Links */
+.linksContainer {
+    position: relative;
+}
+
+.link{
+    color: rgb(200, 119, 200);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    color:green;
+}
+
+a:visited{
+    color:black;
+}
+
+/* The three horizontal lines are called hamburger icons */
+.hamburger {
+    background: none;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(195, 106, 195);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 3.5rem;
+    background: #f7f7f7;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main container for the products section */
+.products {
+    padding: 20px;
+    background-color: #f4eeee;
+}
+
+/* Total price section */
+.tPrice {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Container for product cards */
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   width: screen;
+   gap:20px;
+   justify-content: center;
+   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .cards{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Individual card */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+/* Image */
+.image {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Product name */
+.productName {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Product description */
+.productDes {
+    font-size: 15px;
+    color: #666;
+}
+
+/* Price */
+.price{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Quantity selector */
+.quantitySelector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Plus and minus buttons */
+.circled {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #271818;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Quantity number */
+.quantity {
+    font-size: 20px;
+}
+
+/* Container for delete icons */
+.deleteIcons {
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.del {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icons{
+    color: red;
+    margin-top: 10px;
+}
+
+/* Footer section */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 30px;
+    background: #eee4e4;
+    font-weight:bold;
+}
+
+/* Footer 1 */
+.footer1{
+    font-size: 20px;
+}
+
+hr{
+    height: 2px;
+    background:black;
+}
+
+/* Footer 2 */
+ul{
+    list-style: none;
+    margin-right: 10px;
+}
+
+li::before{
+    content: "\00BB"
+}
+
+
+/* Footer 3 */
+input{
+    margin-top: 10px;
+    border: solid;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+button{
+    background: rgb(236, 167, 236);
+    padding: 5px ;
+    color:white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover{
+    background: white;
+    color:rgb(130, 30, 130);
+}
