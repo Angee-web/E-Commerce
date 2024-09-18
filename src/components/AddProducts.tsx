@@ -35,7 +35,7 @@ const AddProducts = () => {
       };
 
       await axios.post(
-        "http://localhost:4000/api/v1/addProduct",
+        "https://e-commback-1.onrender.com/api/v1/addProduct",
         productData
       );
 

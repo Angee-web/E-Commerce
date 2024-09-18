@@ -14,7 +14,7 @@ function FetchProducts() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/v1/getProducts")
+    fetch("https://e-commback-1.onrender.com/api/v1/getProducts")
       .then((response) => response.json())
       .then((data: { data: Product[] }) => {
         setProducts(data.data);
@@ -23,7 +23,7 @@ function FetchProducts() {
   }, []);
 
    const handleDelete = (id: string) => {
-     fetch(`http://localhost:4000/api/v1/deleteProduct/${id}`, {
+     fetch(`https://e-commback-1.onrender.com/api/v1/deleteProduct/${id}`, {
        method: "DELETE",
      })
        .then((response) => response.json())
