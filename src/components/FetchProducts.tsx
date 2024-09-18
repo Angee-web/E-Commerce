@@ -22,6 +22,19 @@ function FetchProducts() {
       .catch((error) => console.error("Error:", error));
   }, []);
 
+   const handleDelete = (id: string) => {
+     fetch(`http://localhost:4000/api/v1/deleteProduct/${id}`, {
+       method: "DELETE",
+     })
+       .then((response) => response.json())
+       .then((data) => {
+         if (data.status === "success") {
+           setProducts(products.filter((product) => product._id !== id));
+         }
+       })
+       .catch((error) => console.error("Error:", error));
+   };
+
   return (
     <div className={styles.products}>
       <p className={styles.tPrice}>Total Price: $0</p>
@@ -41,7 +54,10 @@ function FetchProducts() {
               <span className={styles.quantity}>0</span>
               <span className={styles.circled}>-</span>
             </div>
-            <div className={styles.deleteIcons}>
+            <div
+              className={styles.deleteIcons}
+              onClick={() => handleDelete(product._id)}
+            >
               <img
                 className={styles.del}
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5yIdJ9GxAbEpmTwOV2GbhgX_-2-mGOpZKOg&s"
